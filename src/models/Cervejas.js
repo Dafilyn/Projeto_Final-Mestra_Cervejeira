@@ -29,12 +29,7 @@ const DBSchema = new mongoose.Schema({
     },
     pais: { 
         type: String,
-    },
-    EditadoPor: {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: user
     }
-
 },{
     timestamps: true
 })
