@@ -11,31 +11,24 @@ const DBSchema = new mongoose.Schema({
     },
     tipo: { 
         type: String,
-        required: true 
     },
     quantidade: { 
         type: String,
-        required: true 
     },
     teorAlcoolico: {
         type: String,
-        required: true
     },
     nota: { 
         type: Number,
-        required: true
     },
     descricao: { 
         type: String,
-        required: true 
     },
     fabricante: { 
-        type: String,
-        required: true 
+        type: String, 
     },
     pais: { 
         type: String,
-        required: true 
     },
     EditadoPor: {
         type: mongoose.Schema.Types.ObjectId,
