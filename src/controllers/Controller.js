@@ -112,7 +112,7 @@ const cadastrarCerveja = (req, res) => {
         console.log(decoded);
     });
 
-    let cerveja = new cervejas(req.body);
+    const newcerveja = new cervejas(req.body);
 
     if (!req.body) {
         return res.status(400).send({ message: "O body não pode estar vazio" });
@@ -126,11 +126,11 @@ const cadastrarCerveja = (req, res) => {
             return res.status(409).send({ message: "Cerveja já cadastrada" });
         }
         if(!cerveja) {
-            cerveja.save((error) => {
+            newcerveja.save((error) => {
                 if (error) {
                     return res.status(400).send({ message: error.message });
                 }
-                return res.status(201).send(cerveja.toJSON());
+                return res.status(201).send(newcerveja.toJSON());
             });
         }
     });
